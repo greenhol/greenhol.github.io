@@ -1,8 +1,37 @@
+#worldTitle {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
 #main {
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 45px;
+    left: 25px;
     width: 1280px;
     height: 720px;
     border: 1px solid black;
+}
+
+#cameraInfo {
+    position: absolute;
+    top: 775px;
+    left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#info {
+    position: absolute;
+    top: 790px;
+    left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #999;
+    font-size: 16px;
+}
+
+p {
+    line-height: 4px;
 }
