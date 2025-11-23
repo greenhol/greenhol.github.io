@@ -42,7 +42,33 @@
     }
 
     .virtual-key:hover {
-        background: #eee;
+        background: #ddd;
+    }
+
+    .virtual-key--selected {
+        border: 2px solid #4682B4;
+        background: #bbf;
+    }
+
+    .physical-key-pressed-detected {
+        border-width: 2px;
+        border-color: #4682B4;
+        background: #bbf;
+        animation: fadeOut 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeOut {
+        from {
+            border-width: 2px;
+            border-color: #4682B4;
+            background: #bbf;
+        }
+
+        to {
+            border-width: 1px;
+            border-color: #bbb;
+            background: #f8f8f8;
+        }
     }
 
     .virtual-key:nth-child(n+11):nth-child(-n+13) {
@@ -185,28 +211,28 @@
 <div>
     <div id="virtual-keyboard-grid">
         <!-- Only visible keys -->
-        <div class="virtual-key" data-key="Escape">ESC</div>
-        <div class="virtual-key" data-key="1">1</div>
-        <div class="virtual-key" data-key="2">2</div>
-        <div class="virtual-key" data-key="3">3</div>
-        <div class="virtual-key" data-key="4">4</div>
-        <div class="virtual-key" data-key="5">5</div>
-        <div class="virtual-key" data-key="6">6</div>
-        <div class="virtual-key" data-key="7">7</div>
-        <div class="virtual-key" data-key="8">8</div>
-        <div class="virtual-key" data-key="9">9</div>
-        <div class="virtual-key" data-key="w">w</div>
-        <div class="virtual-key" data-key="r">r</div>
-        <div class="virtual-key" data-key="ArrowUp">↑</div>
-        <div class="virtual-key" data-key="a">a</div>
-        <div class="virtual-key" data-key="s">s</div>
-        <div class="virtual-key" data-key="d">d</div>
-        <div class="virtual-key" data-key="f">f</div>
-        <div class="virtual-key" data-key=",">,</div>
-        <div class="virtual-key" data-key=".">.</div>
-        <div class="virtual-key" data-key="ArrowLeft">←</div>
-        <div class="virtual-key" data-key="ArrowDown">↓</div>
-        <div class="virtual-key" data-key="ArrowRight">→</div>
+        <div id="virtual-key-Escape" class="virtual-key" data-key="Escape">ESC</div>
+        <div id="virtual-key-1" class="virtual-key" data-key="1">1</div>
+        <div id="virtual-key-2" class="virtual-key" data-key="2">2</div>
+        <div id="virtual-key-3" class="virtual-key" data-key="3">3</div>
+        <div id="virtual-key-4" class="virtual-key" data-key="4">4</div>
+        <div id="virtual-key-5" class="virtual-key" data-key="5">5</div>
+        <div id="virtual-key-6" class="virtual-key" data-key="6">6</div>
+        <div id="virtual-key-7" class="virtual-key" data-key="7">7</div>
+        <div id="virtual-key-8" class="virtual-key" data-key="8">8</div>
+        <div id="virtual-key-9" class="virtual-key" data-key="9">9</div>
+        <div id="virtual-key-w" class="virtual-key" data-key="w">w</div>
+        <div id="virtual-key-r" class="virtual-key" data-key="r">r</div>
+        <div id="virtual-key-ArrowUp" class="virtual-key" data-key="ArrowUp">↑</div>
+        <div id="virtual-key-a" class="virtual-key" data-key="a">a</div>
+        <div id="virtual-key-s" class="virtual-key" data-key="s">s</div>
+        <div id="virtual-key-d" class="virtual-key" data-key="d">d</div>
+        <div id="virtual-key-f" class="virtual-key" data-key="f">f</div>
+        <div id="virtual-key-Comma" class="virtual-key" data-key=",">,</div>
+        <div id="virtual-key-Period" class="virtual-key" data-key=".">.</div>
+        <div id="virtual-key-ArrowLeft" class="virtual-key" data-key="ArrowLeft">←</div>
+        <div id="virtual-key-ArrowDown" class="virtual-key" data-key="ArrowDown">↓</div>
+        <div id="virtual-key-ArrowRight" class="virtual-key" data-key="ArrowRight">→</div>
     </div>
     <div id="keysInfo">
         <p>Change World: Number 1 through 9</p>
