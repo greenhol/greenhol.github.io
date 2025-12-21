@@ -1,0 +1,68 @@
+body {
+    margin: 0px;
+}
+
+html * {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main--default {
+    position: relative;
+    top: 15px;
+    left: 25px;
+    width: 1280px;
+    height: 720px;
+    border: 1px solid black;
+}
+
+.main--small {
+    position: relative;
+    top: 15px;
+    left: 25px;
+    width: 800px;
+    height: 450px;
+    border: 1px solid black;
+}
+
+.main--immersive {
+    position: static;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    margin: 0dp;
+}
+
+#info {
+    position: relative;
+    top: 22px;
+    left: 25px;
+}
+
+.info--default {
+    width: 1280px;
+}
+
+.info--small {
+    width: 800px;
+}
+
+#worldTitle {
+    font-weight: bold;
+    float: left;
+}
+
+#cameraInfo {
+    float: right;
+}
+
+#virtual-keyboard-container {
+    position: relative;
+    top: 50px;
+    left: 25px;
+    width: 900px;
+}
+
+.element--gone {
+    display: none;
+}

@@ -1,0 +1,193 @@
+<style>
+    #keysInfo {
+        position: absolute;
+        top: 32px;
+        left: 600px;
+        color: #999;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #keysInfo p {
+        line-height: 4px;
+    }
+
+    #virtual-keyboard-grid {
+        position: absolute;
+        display: grid;
+        padding: 5px;
+        border: 1px solid #ccc;
+        grid-template-columns: repeat(13, 40px);
+        grid-template-rows: 32px 42px 32px;
+        gap: 3px;
+        width: 556px;
+        /* 11 * width + 10 * gap */
+        height: 112px;
+        /* 4 * height + 3 * gap */
+        background: transparent;
+    }
+
+    .virtual-key {
+        color: #555;
+        background: #f8f8f8;
+        border: 1px solid #bbb;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: monospace;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .virtual-key:hover {
+        background: #ddd;
+    }
+
+    .virtual-key--selected {
+        border: 2px solid #4682B4;
+        background: #bbf;
+    }
+
+    .physical-key-pressed-detected {
+        border-width: 2px;
+        border-color: #4682B4;
+        background: #bbf;
+        animation: fadeOut 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeOut {
+        from {
+            border-width: 2px;
+            border-color: #4682B4;
+            background: #bbf;
+        }
+
+        to {
+            border-width: 1px;
+            border-color: #bbb;
+            background: #f8f8f8;
+        }
+    }
+
+    .virtual-key:nth-child(n+4):nth-child(-n+6) {
+        margin-top: 10px;
+    }
+
+    /* ESC */
+    .virtual-key:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /* 1 */
+    .virtual-key:nth-child(2) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    /* 2 */
+    .virtual-key:nth-child(3) {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    /* w */
+    .virtual-key:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    /* r */
+    .virtual-key:nth-child(5) {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    /* ↑ */
+    .virtual-key:nth-child(6) {
+        grid-column: 12;
+        grid-row: 2;
+    }
+
+    /* a */
+    .virtual-key:nth-child(7) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /* s */
+    .virtual-key:nth-child(8) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    /* d */
+    .virtual-key:nth-child(9) {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    /* f */
+    .virtual-key:nth-child(10) {
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    /* , */
+    .virtual-key:nth-child(11) {
+        grid-column: 8;
+        grid-row: 3;
+    }
+
+    /* . */
+    .virtual-key:nth-child(12) {
+        grid-column: 9;
+        grid-row: 3;
+    }
+
+    /* ← */
+    .virtual-key:nth-child(13) {
+        grid-column: 11;
+        grid-row: 3;
+    }
+
+    /* ↓ */
+    .virtual-key:nth-child(14) {
+        grid-column: 12;
+        grid-row: 3;
+    }
+
+    /* → */
+    .virtual-key:nth-child(15) {
+        grid-column: 13;
+        grid-row: 3;
+    }
+</style>
+
+<div>
+    <div id="virtual-keyboard-grid">
+        <!-- Only visible keys -->
+        <div id="virtual-key-Escape" class="virtual-key" data-key="Escape">ESC</div>
+        <div id="virtual-key-1" class="virtual-key" data-key="1">1</div>
+        <div id="virtual-key-2" class="virtual-key" data-key="2">2</div>
+        <div id="virtual-key-w" class="virtual-key" data-key="w">w</div>
+        <div id="virtual-key-r" class="virtual-key" data-key="r">r</div>
+        <div id="virtual-key-ArrowUp" class="virtual-key" data-key="ArrowUp">↑</div>
+        <div id="virtual-key-a" class="virtual-key" data-key="a">a</div>
+        <div id="virtual-key-s" class="virtual-key" data-key="s">s</div>
+        <div id="virtual-key-d" class="virtual-key" data-key="d">d</div>
+        <div id="virtual-key-f" class="virtual-key" data-key="f">f</div>
+        <div id="virtual-key-Comma" class="virtual-key" data-key=",">,</div>
+        <div id="virtual-key-Period" class="virtual-key" data-key=".">.</div>
+        <div id="virtual-key-ArrowLeft" class="virtual-key" data-key="ArrowLeft">←</div>
+        <div id="virtual-key-ArrowDown" class="virtual-key" data-key="ArrowDown">↓</div>
+        <div id="virtual-key-ArrowRight" class="virtual-key" data-key="ArrowRight">→</div>
+    </div>
+    <div id="keysInfo">
+        <p>Move camera: w - a - s - d - r - f</p>
+        <p>Rotate camera: Arrow keys - comma - dot</p>
+        <p>Reset world config: Escape</p>
+    </div>
+</div>
