@@ -1,0 +1,156 @@
+html * {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+select,
+input {
+    border-radius: 0;
+    border: 1px solid black;
+    background-color: white;
+    padding-left: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.button {
+    height: 22px;
+    line-height: 22px;
+    background-color: #eef;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#header {
+    display: block;
+    position: relative;
+    min-width: 640px;
+    height: 30px;
+}
+
+#busyIndicator {
+    display: block;
+    position: relative;
+    width: 12px;
+    height: 22px;
+    float: left;
+    border: 1px solid black;
+}
+
+.busyIndicator--idle {
+    background-color: #0b0;
+}
+
+.busyIndicator--busy {
+    background-color: #b00;
+}
+
+#resolutionSelect {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 24px;
+    margin-left: 8px;
+    float: left;
+}
+
+#exportButton {
+    display: block;
+    position: relative;
+    width: 150px;
+    float: right;
+}
+
+#canvasArea {
+    display: block;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+}
+
+#svgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: all;
+}
+
+#rangeArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    min-width: 640px;
+    top: 4px;
+    height: 80px;
+}
+
+#coordsArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    height: 24px;
+}
+
+#setRangeArea {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    position: relative;
+    height: 30px;
+}
+
+#rangeInput {
+    display: block;
+    width: 560px;
+    height: 24px;
+}
+
+#setRangeButton {
+    display: block;
+    width: 52px;
+    margin-left: 8px;
+}
+
+#resetRangeButton {
+    display: block;
+    width: 52px;
+    margin-left: 8px;
+}
+
+#planeSelectArea {
+    display: block;
+    position: relative;
+    min-width: 640px;
+    height: 30px;
+}
+
+#planeSelect {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 24px;
+}
+
+#planeConfigArea {
+    display: block;
+    position: relative;
+    min-width: 640px;
+    top: 8px;
+    height: 30px;
+}
+
+#iterationsInput {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 24px;
+}
