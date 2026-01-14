@@ -13,15 +13,23 @@ body {
 	text-shadow: 0px 0px 64px #3f75a2;
 }
 
+.title {
+	font-size: 20px;
+	font-weight: bold;
+	color: steelblue;
+	margin: 15px 0 15px 25px;
+}
+
 hr {
 	border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(70,130,180, 1), rgba(0, 0, 0, 0));
-	margin-bottom: 25px;
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 .link {
-	margin: 10px 15px;
+	margin: 10px 35px;
 }
 
 a {
