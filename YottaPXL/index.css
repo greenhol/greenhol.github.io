@@ -139,18 +139,3 @@ input {
     width: 300px;
     height: 24px;
 }
-
-#planeConfigArea {
-    display: block;
-    position: relative;
-    min-width: 640px;
-    top: 8px;
-    height: 30px;
-}
-
-#iterationsInput {
-    display: block;
-    position: relative;
-    width: 300px;
-    height: 24px;
-}
