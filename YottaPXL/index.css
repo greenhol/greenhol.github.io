@@ -64,7 +64,8 @@ input {
     display: block;
     position: relative;
     width: 150px;
-    float: right;
+    margin-left: 8px;
+    float: left;
 }
 
 #canvasArea {
