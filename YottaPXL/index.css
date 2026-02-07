@@ -111,7 +111,7 @@ input {
 
 #rangeInput {
     display: block;
-    width: 560px;
+    width: 514px;
     height: 24px;
 }
 
@@ -137,6 +137,6 @@ input {
 #planeSelect {
     display: block;
     position: relative;
-    width: 300px;
+    width: 514px;
     height: 24px;
 }
