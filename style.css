@@ -7,9 +7,18 @@ body {
 }
 
 .header {
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+	margin-left: 10px;
 	font-size: 50px;
 	color: steelblue;
-	margin: 15px 0 30px 15px;
+}
+
+.header-title {
+	font-size: 60px;
+	color: steelblue;
+	margin-left: 30px;
 	text-shadow: 0px 0px 64px #3f75a2;
 }
 
