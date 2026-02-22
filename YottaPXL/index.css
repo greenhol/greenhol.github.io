@@ -15,6 +15,14 @@ input {
     cursor: pointer;
 }
 
+.gone {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
 .button {
     height: 22px;
     line-height: 22px;
@@ -51,8 +59,23 @@ input {
     background-color: #b00;
 }
 
+#progressBar {
+    position: relative;
+    width: 298px;
+    height: 24px;
+    margin-left: 8px;
+    float: left;
+    border: 1px solid black;
+}
+
+#progress {
+    position: relative;
+    height: 20px;
+    margin: 2px;
+    background-color: #cce;
+}
+
 #resolutionSelect {
-    display: block;
     position: relative;
     width: 300px;
     height: 24px;
@@ -61,7 +84,6 @@ input {
 }
 
 #exportButton {
-    display: block;
     position: relative;
     width: 150px;
     margin-left: 8px;
