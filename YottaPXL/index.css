@@ -68,11 +68,25 @@ input {
     border: 1px solid black;
 }
 
-#progress {
+#progressIndicator {
     position: relative;
     height: 20px;
     margin: 2px;
     background-color: #cce;
+}
+
+#progressStep {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    max-width: 100%;
+    pointer-events: none;
+    width: auto;
 }
 
 #resolutionSelect {
