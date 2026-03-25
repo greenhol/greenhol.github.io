@@ -35,19 +35,24 @@ input {
     -ms-user-select: none;
 }
 
+.button:hover {
+    -moz-box-shadow: 0 0 5px #aaf;
+    -webkit-box-shadow: 0 0 5px #aaf;
+    box-shadow: 0 0 5px #aaf;
+}
+
 #header {
     display: block;
     position: relative;
     min-width: 640px;
-    height: 30px;
+    height: 60px;
 }
 
 #busyIndicator {
     display: block;
-    position: relative;
+    position: absolute;
     width: 12px;
-    height: 22px;
-    float: left;
+    height: 52px;
     border: 1px solid black;
 }
 
@@ -60,11 +65,10 @@ input {
 }
 
 #progressBar {
-    position: relative;
-    width: 298px;
+    position: absolute;
+    width: 398px;
     height: 24px;
-    margin-left: 8px;
-    float: left;
+    left: 20px;
     border: 1px solid black;
 }
 
@@ -90,19 +94,41 @@ input {
 }
 
 #resolutionSelect {
-    position: relative;
-    width: 300px;
+    position: absolute;
+    width: 400px;
     height: 24px;
-    margin-left: 8px;
-    float: left;
+    left: 20px;
 }
 
 #exportButton {
-    position: relative;
-    width: 150px;
-    margin-left: 8px;
-    float: left;
+    position: absolute;
+    width: 168px;
+    left: 428px;
 }
+
+#planeSelect {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 24px;
+    top: 30px;
+    left: 20px;
+}
+
+#configButton {
+    position: absolute;
+    width: 80px;
+    top: 30px;
+    left: 428px;
+}
+
+#resetConfigButton {
+    position: absolute;
+    width: 80px;
+    top: 30px;
+    left: 516px;
+}
+
 
 #canvasArea {
     display: block;
@@ -147,7 +173,7 @@ input {
 
 #rangeInput {
     display: block;
-    width: 514px;
+    width: 574px;
     height: 24px;
 }
 
@@ -155,24 +181,4 @@ input {
     display: block;
     width: 52px;
     margin-left: 8px;
-}
-
-#resetRangeButton {
-    display: block;
-    width: 52px;
-    margin-left: 8px;
-}
-
-#planeSelectArea {
-    display: block;
-    position: relative;
-    min-width: 640px;
-    height: 30px;
-}
-
-#planeSelect {
-    display: block;
-    position: relative;
-    width: 514px;
-    height: 24px;
 }
