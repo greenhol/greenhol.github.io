@@ -102,7 +102,7 @@ input {
 
 #exportButton {
     position: absolute;
-    width: 168px;
+    width: 208px;
     left: 428px;
 }
 
@@ -117,16 +117,16 @@ input {
 
 #configButton {
     position: absolute;
-    width: 80px;
+    width: 100px;
     top: 30px;
     left: 428px;
 }
 
 #resetConfigButton {
     position: absolute;
-    width: 80px;
+    width: 100px;
     top: 30px;
-    left: 516px;
+    left: 536px;
 }
 
 
