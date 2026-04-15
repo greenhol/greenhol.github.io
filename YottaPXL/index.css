@@ -35,6 +35,20 @@ input {
     -ms-user-select: none;
 }
 
+.button.feedback {
+    animation: fadeFeedback 1s ease;
+}
+
+@keyframes fadeFeedback {
+    0% {
+        background-color: #66b;
+    }
+
+    100% {
+        background-color: #eef;
+    }
+}
+
 .button:hover {
     -moz-box-shadow: 0 0 5px #aaf;
     -webkit-box-shadow: 0 0 5px #aaf;
@@ -115,18 +129,25 @@ input {
     left: 20px;
 }
 
-#configButton {
+#setConfigButton {
     position: absolute;
-    width: 100px;
+    width: 85px;
     top: 30px;
     left: 428px;
 }
 
+#copyConfigButton {
+    position: absolute;
+    width: 22px;
+    top: 30px;
+    left: 521px;
+}
+
 #resetConfigButton {
     position: absolute;
-    width: 100px;
+    width: 85px;
     top: 30px;
-    left: 536px;
+    left: 551px;
 }
 
 
@@ -173,12 +194,24 @@ input {
 
 #rangeInput {
     display: block;
-    width: 574px;
+    width: 487px;
     height: 24px;
 }
 
 #setRangeButton {
-    display: block;
+    position: absolute;
     width: 52px;
-    margin-left: 8px;
+    left: 494px;
+}
+
+#copyRangeButton {
+    position: absolute;
+    width: 22px;
+    left: 554px;
+}
+
+#resetRangeButton {
+    position: absolute;
+    width: 52px;
+    left: 584px;
 }
