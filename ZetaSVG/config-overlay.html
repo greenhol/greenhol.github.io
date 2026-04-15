@@ -61,7 +61,7 @@
     #config-overlay-content {
         position: relative;
         background-color: rgba(255, 255, 255);
-        padding: 24px;
+        padding: 16px 24px;
         margin: 24px 36px;
         width: 500px;
         border: 1px solid black;
@@ -72,9 +72,23 @@
         margin-bottom: 8px;
     }
 
+    #config-overlay-action-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: baseline;
+        margin: 8px;
+    }
+
+    #config-overlay-reset-button {
+        border-width: 0;
+        color: #444;
+    }
+
     #config-overlay-apply-button {
-        position: relative;
-        margin: 16px 0 8px;
+        border-width: 2px;
+        border-color: #008;
+        margin-left: 16px;
     }
 
     #config-overlay-dynamic-content {
