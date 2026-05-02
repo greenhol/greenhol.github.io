@@ -198,6 +198,11 @@ input {
     height: 24px;
 }
 
+.rangeInputWarning {
+    border: 1px dashed #a60;
+    background-color: #ffc;
+}
+
 #setRangeButton {
     position: absolute;
     width: 52px;
