@@ -1,8 +1,8 @@
 <style>
     #keysInfo {
         position: absolute;
-        top: 20px;
-        left: 600px;
+        top: 0px;
+        left: 590px;
         color: #999;
         font-size: 16px;
         font-family: Arial, Helvetica, sans-serif;
@@ -72,7 +72,7 @@
     }
 
     /* Second row */
-    .virtual-key:nth-child(n+12):nth-child(-n+16) {
+    .virtual-key:nth-child(n+12):nth-child(-n+17) {
         margin-top: 10px;
     }
 
@@ -166,62 +166,74 @@
         grid-row: 2;
     }
 
-    /* ↑ */
+    /* + */
     .virtual-key:nth-child(16) {
+        grid-column: 10;
+        grid-row: 2;
+    }
+
+    /* ↑ */
+    .virtual-key:nth-child(17) {
         grid-column: 12;
         grid-row: 2;
     }
 
     /* a */
-    .virtual-key:nth-child(17) {
+    .virtual-key:nth-child(18) {
         grid-column: 1;
         grid-row: 3;
     }
 
     /* s */
-    .virtual-key:nth-child(18) {
+    .virtual-key:nth-child(19) {
         grid-column: 2;
         grid-row: 3;
     }
 
     /* d */
-    .virtual-key:nth-child(19) {
+    .virtual-key:nth-child(20) {
         grid-column: 3;
         grid-row: 3;
     }
 
     /* f */
-    .virtual-key:nth-child(20) {
+    .virtual-key:nth-child(21) {
         grid-column: 4;
         grid-row: 3;
     }
 
     /* , */
-    .virtual-key:nth-child(21) {
+    .virtual-key:nth-child(22) {
         grid-column: 8;
         grid-row: 3;
     }
 
     /* . */
-    .virtual-key:nth-child(22) {
+    .virtual-key:nth-child(23) {
         grid-column: 9;
         grid-row: 3;
     }
 
+    /* - */
+    .virtual-key:nth-child(24) {
+        grid-column: 10;
+        grid-row: 3;
+    }
+
     /* ← */
-    .virtual-key:nth-child(23) {
+    .virtual-key:nth-child(25) {
         grid-column: 11;
         grid-row: 3;
     }
 
     /* ↓ */
-    .virtual-key:nth-child(24) {
+    .virtual-key:nth-child(26) {
         grid-column: 12;
         grid-row: 3;
     }
 
     /* → */
-    .virtual-key:nth-child(25) {
+    .virtual-key:nth-child(27) {
         grid-column: 13;
         grid-row: 3;
     }
@@ -245,6 +257,7 @@
         <div id="virtual-key-r" class="virtual-key" data-key="r">r</div>
         <div id="virtual-key-o" class="virtual-key" data-key="o">o</div>
         <div id="virtual-key-p" class="virtual-key" data-key="p">p</div>
+        <div id="virtual-key-Plus" class="virtual-key" data-key="+">+</div>
         <div id="virtual-key-ArrowUp" class="virtual-key" data-key="ArrowUp">↑</div>
         <div id="virtual-key-a" class="virtual-key" data-key="a">a</div>
         <div id="virtual-key-s" class="virtual-key" data-key="s">s</div>
@@ -252,6 +265,7 @@
         <div id="virtual-key-f" class="virtual-key" data-key="f">f</div>
         <div id="virtual-key-Comma" class="virtual-key" data-key=",">,</div>
         <div id="virtual-key-Period" class="virtual-key" data-key=".">.</div>
+        <div id="virtual-key-Minus" class="virtual-key" data-key="-">-</div>
         <div id="virtual-key-ArrowLeft" class="virtual-key" data-key="ArrowLeft">←</div>
         <div id="virtual-key-ArrowDown" class="virtual-key" data-key="ArrowDown">↓</div>
         <div id="virtual-key-ArrowRight" class="virtual-key" data-key="ArrowRight">→</div>
@@ -262,5 +276,6 @@
         <p>Toggle perspective: p, Esc (default)</p>
         <p>Move camera: w - a - s - d - r - f</p>
         <p>Rotate camera: Arrow keys - comma - dot</p>
+        <p>Rotate FOV: + / -</p>
     </div>
 </div>
