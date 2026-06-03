@@ -58,9 +58,9 @@ html * {
 
 #virtual-keyboard-container {
     position: relative;
-    top: 60px;
+    top: 52px;
     left: 25px;
-    width: 900px;
+    width: 800px;
 }
 
 .element--gone {
