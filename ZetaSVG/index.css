@@ -7,10 +7,17 @@ html * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#realmSelect {
+    position: relative;
+    top: 8px;
+    left: 8px;
+    width: 400px;
+}
+
 .main--default {
     position: relative;
-    top: 15px;
-    left: 25px;
+    top: 16px;
+    left: 8px;
     width: 1280px;
     height: 720px;
     border: 1px solid black;
@@ -18,8 +25,8 @@ html * {
 
 .main--small {
     position: relative;
-    top: 15px;
-    left: 25px;
+    top: 16px;
+    left: 8px;
     width: 800px;
     height: 450px;
     border: 1px solid black;
@@ -36,7 +43,7 @@ html * {
 #info {
     position: relative;
     top: 22px;
-    left: 25px;
+    left: 8px;
 }
 
 .info--default {
@@ -59,7 +66,7 @@ html * {
 #virtual-keyboard-container {
     position: relative;
     top: 52px;
-    left: 25px;
+    left: 8px;
     width: 800px;
 }
 
