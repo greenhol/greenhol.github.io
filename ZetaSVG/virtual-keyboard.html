@@ -7,10 +7,10 @@
         grid-template-columns: repeat(18, 40px);
         grid-template-rows: 32px 42px 32px;
         gap: 3px;
-        width: 772px;
-        /* 11 * width + 10 * gap */
+        /* 18 cols × 40px + 17 gaps × 3px = 771px */
+        width: 771px;
+        /* 3 rows × (32px + 42px + 32px) + 2 gaps × 3px = 112px */
         height: 112px;
-        /* 4 * height + 3 * gap */
         background: transparent;
         user-select: none;
         -webkit-touch-callout: none;
@@ -66,11 +66,11 @@
     }
 
     /* Second row */
-    .virtual-key:nth-child(n+13):nth-child(-n+16) {
+    .virtual-key:nth-child(n+14):nth-child(-n+17) {
         margin-top: 10px;
     }
 
-    .virtual-key:nth-child(17) {
+    .virtual-key:nth-child(18) {
         margin-bottom: 10px;
     }
 
@@ -140,98 +140,104 @@
         grid-row: 1;
     }
 
-    /* - */
+    /* Backspace */
     .virtual-key:nth-child(12) {
+        grid-column: 14 / span 2;
+        grid-row: 1;
+    }
+
+    /* - */
+    .virtual-key:nth-child(13) {
         grid-column: 18;
         grid-row: 1;
     }
 
     /* w */
-    .virtual-key:nth-child(13) {
+    .virtual-key:nth-child(14) {
         grid-column: 4;
         grid-row: 2;
     }
 
     /* r */
-    .virtual-key:nth-child(14) {
+    .virtual-key:nth-child(15) {
         grid-column: 6;
         grid-row: 2;
     }
 
     /* o */
-    .virtual-key:nth-child(15) {
+    .virtual-key:nth-child(16) {
         grid-column: 11;
         grid-row: 2;
     }
 
     /* ↑ */
-    .virtual-key:nth-child(16) {
+    .virtual-key:nth-child(17) {
         grid-column: 16;
         grid-row: 2;
     }
 
     /* + */
-    .virtual-key:nth-child(17) {
+    .virtual-key:nth-child(18) {
         grid-column: 18;
         grid-row: 2;
     }
 
     /* a */
-    .virtual-key:nth-child(18) {
+    .virtual-key:nth-child(19) {
         grid-column: 3;
         grid-row: 3;
     }
 
     /* s */
-    .virtual-key:nth-child(19) {
+    .virtual-key:nth-child(20) {
         grid-column: 4;
         grid-row: 3;
     }
 
     /* d */
-    .virtual-key:nth-child(20) {
+    .virtual-key:nth-child(21) {
         grid-column: 5;
         grid-row: 3;
     }
 
     /* f */
-    .virtual-key:nth-child(21) {
+    .virtual-key:nth-child(22) {
         grid-column: 6;
         grid-row: 3;
     }
 
     /* v */
-    .virtual-key:nth-child(22) {
+    .virtual-key:nth-child(23) {
         grid-column: 8;
         grid-row: 3;
     }
 
     /* , */
-    .virtual-key:nth-child(23) {
+    .virtual-key:nth-child(24) {
         grid-column: 12;
         grid-row: 3;
     }
 
     /* . */
-    .virtual-key:nth-child(24) {
+    .virtual-key:nth-child(25) {
         grid-column: 13;
         grid-row: 3;
     }
 
     /* ← */
-    .virtual-key:nth-child(25) {
+    .virtual-key:nth-child(26) {
         grid-column: 15;
         grid-row: 3;
     }
 
     /* ↓ */
-    .virtual-key:nth-child(26) {
+    .virtual-key:nth-child(27) {
         grid-column: 16;
         grid-row: 3;
     }
 
     /* → */
-    .virtual-key:nth-child(27) {
+    .virtual-key:nth-child(28) {
         grid-column: 17;
         grid-row: 3;
     }
@@ -251,6 +257,7 @@
         <div id="virtual-key-8" class="virtual-key" data-key="8">8</div>
         <div id="virtual-key-9" class="virtual-key" data-key="9">9</div>
         <div id="virtual-key-10" class="virtual-key" data-key="10">0</div>
+        <div id="virtual-key-Backspace" class="virtual-key" data-key="Backspace">⟵</div>
         <div id="virtual-key-Minus" class="virtual-key" data-key="-">-</div>
         <div id="virtual-key-w" class="virtual-key" data-key="w">w</div>
         <div id="virtual-key-r" class="virtual-key" data-key="r">r</div>
