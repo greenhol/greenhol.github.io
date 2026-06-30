@@ -8,11 +8,17 @@ html * {
 }
 
 #header {
-    position: relative;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
     top: 8px;
     left: 8px;
+}
+
+#header-start {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 .header--default {
@@ -27,6 +33,23 @@ html * {
 
 #realm-select {
     width: 400px;
+}
+
+#export-button {
+    width: 169px;
+    height: 19px;
+    line-height: 22px;
+    background-color: #f8f8f8;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#export-button:hover {
+    background-color: #ddd;
 }
 
 #fps-display {
