@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "AG_6775";
+    src: url("AG_6775.V1.woff2") format("woff2");
+}
+
 body {
     margin: 0px;
 }
@@ -16,6 +21,12 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     cursor: pointer;
+}
+
+.ag6775 {
+    font-family: AG_6775, Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    letter-spacing: 3%;
 }
 
 .button {
@@ -120,7 +131,6 @@ select {
 }
 
 #world-title {
-    font-weight: bold;
     float: left;
 }
 
@@ -130,7 +140,7 @@ select {
 
 #virtual-keyboard-container {
     position: relative;
-    top: 52px;
+    top: 46px;
     left: 8px;
     width: 800px;
 }

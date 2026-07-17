@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "AG_6775";
+    src: url("AG_6775.V1.woff2") format("woff2");
+}
+
 body {
     margin: 0px;
 }
@@ -31,6 +36,12 @@ input {
 
 .invisible {
     visibility: hidden;
+}
+
+.ag6775 {
+    font-family: AG_6775, Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    letter-spacing: 3%;
 }
 
 .button {
