@@ -1,10 +1,11 @@
 @font-face {
   font-family: "AG_6775";
-  src: url("./AG_6775.V1.woff2") format("woff2");
+  src: url("./AG_6775.V2.woff2") format("woff2");
 }
 
 * {
 	font-family: AG_6775, Arial, Helvetica, sans-serif;
+	letter-spacing: 3%;
 }
 
 body {
@@ -21,21 +22,22 @@ body {
 }
 
 .header-title {
-	font-size: 72px;
+	font-size: 69px;
 	color: steelblue;
 	margin-left: 30px;
 	text-shadow: 0px 0px 64px #3f75a2;
 }
 
 .title {
-	font-size: 26px;
+	font-size: 22px;
+	font-weight: bold;
 	color: steelblue;
 	margin: 15px 0 15px 25px;
 }
 
 hr {
 	border: 0;
-    height: 1px;
+    height: 2px;
     background-image: linear-gradient(to right, rgba(70,130,180, 1), rgba(0, 0, 0, 0));
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -46,7 +48,7 @@ hr {
 }
 
 a {
-    font-size: 22px;
+    font-size: 18px;
 	text-decoration: none;
 	color: steelblue;
 }
