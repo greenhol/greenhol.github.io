@@ -20,6 +20,10 @@ body {
 	color: steelblue;
 }
 
+.header-hr {
+	height: 2px;
+}
+
 .header-title {
 	font-size: 64px;
 	color: steelblue;
