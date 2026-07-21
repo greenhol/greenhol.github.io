@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,18 +13,27 @@
       font-style: normal;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --ink:        #1a1a18;
-      --paper:      #f2f0eb;
-      --rule:       #c8c4bc;
-      --accent:     #1a1a18;
-      --font-main:  "AG_6775", monospace;
-      --font-ui:    "Helvetica Neue", Arial, sans-serif;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { background: var(--paper); color: var(--ink); }
+    :root {
+      --ink: #1a1a18;
+      --paper: #f2f0eb;
+      --rule: #c8c4bc;
+      --accent: #1a1a18;
+      --font-main: "AG_6775", monospace;
+      --font-ui: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    html {
+      background: var(--paper);
+      color: var(--ink);
+    }
 
     body {
       font-family: var(--font-ui);
@@ -110,7 +120,7 @@
     }
 
     .glyph-cell:hover {
-      background: var(--ink);
+      background: #2d4f69;
       color: var(--paper);
       border-color: var(--ink);
     }
@@ -123,10 +133,6 @@
       gap: 20px;
       padding: 14px 0;
       border-bottom: 1px solid var(--rule);
-    }
-
-    .size-row:first-child {
-      border-top: 1px solid var(--rule);
     }
 
     .size-label {
@@ -200,6 +206,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -233,13 +240,57 @@
   </section>
 
   <section>
-    <div class="section-label">Technical &amp; Mathematical</div>
-    <div class="glyph-grid" id="glyphs-technical"></div>
+    <div class="section-label">Mathematical</div>
+    <div class="glyph-grid" id="glyphs-mathematical"></div>
   </section>
 
   <section>
     <div class="section-label">Greek</div>
     <div class="glyph-grid" id="glyphs-greek"></div>
+  </section>
+
+  <!-- Custom text playground -->
+  <section>
+    <div class="section-label">Playground</div>
+    <div style="display:grid; grid-template-columns:1fr auto; gap:8px; margin-bottom:16px;">
+      <input id="playground-input" type="text" value="The quick brown fox jumps over the lazy dog." style="
+        font-family: var(--font-ui);
+        font-size: 13px;
+        padding: 8px 12px;
+        border: 1px solid var(--rule);
+        background: white;
+        color: var(--ink);
+        outline: none;
+        width: 100%;
+      " />
+      <select id="playground-size" style="
+        font-family: var(--font-ui);
+        font-size: 13px;
+        padding: 8px 12px;
+        border: 1px solid var(--rule);
+        background: white;
+        color: var(--ink);
+        outline: none;
+        cursor: pointer;
+      ">
+        <option value="8">8px</option>
+        <option value="12">12px</option>
+        <option value="16">16px</option>
+        <option value="22" selected>22px</option>
+        <option value="30">30px</option>
+        <option value="40">40px</option>
+        <option value="60">60px</option>
+        <option value="90">90px</option>
+      </select>
+    </div>
+    <div id="playground-output" style="
+      font-family: var(--font-main);
+      font-size: 22px;
+      line-height: 1.4;
+      min-height: 60px;
+      padding: 16px 0;
+      word-break: break-word;
+    ">The quick brown fox jumps over the lazy dog.</div>
   </section>
 
   <!-- Size scale -->
@@ -253,19 +304,45 @@
     <div class="origin">
       <div>
         <h3>Origin</h3>
-        <p>AG_6775 is derived from physical DIN 6775 lettering stencils used with a 0.7&thinsp;mm technical pen. The proportions follow the original DIN specification while retaining the character of manual drafting practice. A personal interpretation of a standard.</p>
+        <p>AG_6775 is derived from physical DIN 6775 lettering stencils used with a 0.7&thinsp;mm technical pen. The
+          proportions follow the original DIN specification while retaining the character of manual drafting practice. A
+          personal interpretation of a standard.</p>
       </div>
       <div>
         <h3>Specifications</h3>
         <table class="spec-table">
-          <tr><td>Style</td><td>Monoline, upright</td></tr>
-          <tr><td>UPM</td><td>1100</td></tr>
-          <tr><td>Cap height</td><td>700</td></tr>
-          <tr><td>x-height</td><td>500</td></tr>
-          <tr><td>Stroke width</td><td>80 units</td></tr>
-          <tr><td>Glyphs</td><td>233+</td></tr>
-          <tr><td>Formats</td><td>TTF, WOFF2</td></tr>
-          <tr><td>Coverage</td><td>Latin, Greek, Technical</td></tr>
+          <tr>
+            <td>Style</td>
+            <td>Monoline, upright</td>
+          </tr>
+          <tr>
+            <td>UPM</td>
+            <td>1100</td>
+          </tr>
+          <tr>
+            <td>Cap height</td>
+            <td>700</td>
+          </tr>
+          <tr>
+            <td>x-height</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>Stroke width</td>
+            <td>80 units</td>
+          </tr>
+          <tr>
+            <td>Glyphs</td>
+            <td>233+</td>
+          </tr>
+          <tr>
+            <td>Formats</td>
+            <td>TTF, WOFF2</td>
+          </tr>
+          <tr>
+            <td>Coverage</td>
+            <td>Latin, Greek, Technical</td>
+          </tr>
         </table>
       </div>
     </div>
@@ -279,11 +356,28 @@
   <script>
     // Character groups from the provided glyph list
     const groups = {
-      punctuation: `! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ \` { | } ~ ¡ ¢ £ ¥ § © « ® ° ± ² ³ ´ µ ¶ · ¹ » ¼ ½ ¾ ¿ ' ' ‚ ‛ " " „ ‟ • … ‹ › € № ™`.split(' ').filter(c => c.trim()),
-      accented: `À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Œ œ Ÿ`.split(' ').filter(c => c.trim()),
-      technical: `← ↑ → ↓ √ ∞ ≈ ≠ ≤ ≥ ⌀ ⟵ ⟶ ⟷ ⧉`.split(' ').filter(c => c.trim()),
+      punctuation: `! " # $ % & ' ( ) * , . / : ; ? @ [ ] \\ ^ _ \` { } | ~ ¡ ¢ £ ¥ § © ® ° ´ µ ¶ ¿ ' ' ‚ ‛ " " „ ‟ • … ‹ › « » € № ™ ← ↑ → ↓ ⟵ ⟶ ⟷ ⧉`.split(' ').filter(c => c.trim()),
+      accented: `À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ø ù ú û ü ý þ ÿ Œ œ Ÿ`.split(' ').filter(c => c.trim()),
+      mathematical: `+ - ± · × ÷ ¹ ² ³ √ = < > ≤ ≥ ≠ ≈ ⌀ ¼ ½ ¾ ∞`.split(' ').filter(c => c.trim()),
       greek: `Α Β Ε Ζ Η Θ Ι Κ Μ Ν Ο Ρ Σ Τ Υ α β γ θ μ π ϕ`.split(' ').filter(c => c.trim()),
     };
+
+    function copyToClipboard(ch) {
+      navigator.clipboard.writeText(ch).then(() => {
+        // brief visual feedback — cell flashes green
+        const active = document.activeElement;
+        if (active && active.classList.contains('glyph-cell')) {
+          active.style.background = '#94b6d1';
+          active.style.color = 'white';
+          active.style.borderColor = '#2d4f69';
+          setTimeout(() => {
+            active.style.background = '';
+            active.style.color = '';
+            active.style.borderColor = '';
+          }, 600);
+        }
+      });
+    }
 
     // Render glyph grids
     Object.entries(groups).forEach(([key, chars]) => {
@@ -293,13 +387,16 @@
         const cell = document.createElement('div');
         cell.className = 'glyph-cell';
         cell.textContent = ch;
-        cell.title = `U+${ch.codePointAt(0).toString(16).toUpperCase().padStart(4,'0')}`;
+        cell.title = `U+${ch.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')} — click to copy`;
+        cell.tabIndex = 0;
+        cell.addEventListener('click', () => copyToClipboard(ch));
+        cell.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') copyToClipboard(ch); });
         container.appendChild(cell);
       });
     });
 
     // Render size scale
-    const sizes = [8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
+    const sizes = [8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32];
     const pangram = 'The quick brown fox jumps over the lazy dog.';
     const scaleContainer = document.getElementById('size-scale');
     sizes.forEach(size => {
@@ -311,7 +408,21 @@
       `;
       scaleContainer.appendChild(row);
     });
+
+    // Playground
+    const playgroundInput = document.getElementById('playground-input');
+    const playgroundSize = document.getElementById('playground-size');
+    const playgroundOutput = document.getElementById('playground-output');
+
+    function updatePlayground() {
+      playgroundOutput.textContent = playgroundInput.value;
+      playgroundOutput.style.fontSize = playgroundSize.value + 'px';
+    }
+
+    playgroundInput.addEventListener('input', updatePlayground);
+    playgroundSize.addEventListener('change', updatePlayground);
   </script>
 
 </body>
+
 </html>
