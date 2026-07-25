@@ -25,7 +25,7 @@ select {
 
 .ag6775 {
     font-family: AG_6775, Arial, Helvetica, sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     letter-spacing: 3%;
 }
 
@@ -132,6 +132,7 @@ select {
 
 #world-title {
     float: left;
+    font-weight: bold;
 }
 
 #camera-info {
