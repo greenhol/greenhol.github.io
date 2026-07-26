@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "AG_6775";
+    src: url("AG_6775.V2.woff2") format("woff2");
+}
+
+html * {
+    font-size: 16px;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+.ag6775 {
+    font-family: AG_6775, Arial, Helvetica, sans-serif;
+    letter-spacing: 3%;
+}
+
+:root {
+    --ink: #1a1a18;
+    --paper: #f2f0eb;
+    --rule: #c8c4bc;
+}
+
+html {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 40px 120px;
+}
+
+header {
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 32px 0 28px;
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 16px;
+}
+
+.header-title {
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+}
+
+.header-meta {
+    text-align: right;
+    color: #888;
+    font-size: 11px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+#main section {
+    margin-bottom: 56px;
+}
+
+.section-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #999;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* Interpolation dropdown */
+.easing-select {
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 1px solid var(--rule);
+    background: white;
+    color: var(--ink);
+    outline: none;
+    cursor: pointer;
+}
+
+/* Shared gradient band, used by both the playground and the gallery.
+   The border lives on the wrapper div, not the canvas itself, so the
+   canvas's own box exactly equals the pixel area being painted. */
+.gradient-band {
+    border: 1px solid var(--rule);
+}
+
+.gradient-band--clickable {
+    cursor: pointer;
+}
+
+.gradient-band-canvas {
+    display: block;
+    width: 100%;
+}
+
+/* Playground */
+.playground-input {
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 1px solid var(--rule);
+    background: white;
+    color: var(--ink);
+    outline: none;
+    width: 100%;
+    margin-top: 16px;
+    box-sizing: border-box;
+}
+
+/* Gallery — full-width bands stacked vertically, same width as the playground */
+.gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.gallery-name {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999;
+    margin-bottom: 8px;
+}
