@@ -35,7 +35,7 @@ html {
 body {
     max-width: 960px;
     margin: 0 auto;
-    padding: 60px 40px 120px;
+    padding: 60px 40px 60px;
 }
 
 header {
@@ -50,7 +50,7 @@ header {
 }
 
 .header-title {
-    font-size: 64px;
+    font-size: clamp(28px, 9vw, 64px);
     line-height: 1;
 }
 
@@ -89,9 +89,6 @@ header {
     cursor: pointer;
 }
 
-/* Shared gradient band, used by both the playground and the gallery.
-   The border lives on the wrapper div, not the canvas itself, so the
-   canvas's own box exactly equals the pixel area being painted. */
 .gradient-band {
     border: 1px solid var(--rule);
 }
@@ -118,7 +115,6 @@ header {
     box-sizing: border-box;
 }
 
-/* Gallery — full-width bands stacked vertically, same width as the playground */
 .gallery-grid {
     display: flex;
     flex-direction: column;
