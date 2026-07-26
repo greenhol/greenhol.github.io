@@ -52,7 +52,6 @@ header {
 .header-title {
     font-size: 64px;
     line-height: 1;
-    letter-spacing: 0.01em;
 }
 
 .header-meta {
@@ -80,7 +79,8 @@ header {
 
 /* Interpolation dropdown */
 .easing-select {
-    font-size: 13px;
+    width: 200px;
+    font-size: 15px;
     padding: 8px 12px;
     border: 1px solid var(--rule);
     background: white;
@@ -107,7 +107,7 @@ header {
 
 /* Playground */
 .playground-input {
-    font-size: 13px;
+    font-size: 15px;
     padding: 8px 12px;
     border: 1px solid var(--rule);
     background: white;
