@@ -13,11 +13,7 @@
 
 html * {
     font-size: 16px;
-    font-family: Calibri, Arial, Helvetica, sans-serif;
-}
-
-.ag6775 {
-    font-family: AG_6775, Arial, Helvetica, sans-serif;
+    font-family: AG_6775, Calibri, Arial, Helvetica, sans-serif;
     letter-spacing: 3%;
 }
 
@@ -47,6 +43,17 @@ header {
     grid-template-columns: 1fr auto;
     align-items: end;
     gap: 16px;
+}
+
+select {
+    width: 200px;
+    font-size: 15px;
+    padding: 7.5px 12px;
+    border: 1px solid var(--rule);
+    background: white;
+    color: var(--ink);
+    outline: none;
+    cursor: pointer;
 }
 
 .header-title {
@@ -81,18 +88,6 @@ header {
     border-bottom: 1px solid var(--rule);
     padding-bottom: 8px;
     margin-bottom: 20px;
-}
-
-/* Interpolation dropdown */
-.easing-select {
-    width: 200px;
-    font-size: 15px;
-    padding: 8px 12px;
-    border: 1px solid var(--rule);
-    background: white;
-    color: var(--ink);
-    outline: none;
-    cursor: pointer;
 }
 
 .gradient-band {
@@ -228,7 +223,7 @@ header {
     white-space: nowrap;
 }
 
-.randomizer-button {
+.div-button {
     font-size: 15px;
     padding: 8px 20px;
     border: 1px solid var(--ink);
@@ -237,7 +232,7 @@ header {
     cursor: pointer;
 }
 
-.randomizer-button:hover {
+.div-button:hover {
     opacity: 0.85;
 }
 
@@ -246,4 +241,32 @@ header {
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 16px;
+}
+
+.file-upload-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.file-upload-input:focus+.div-button {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+}
+
+.file-upload-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.file-upload-name {
+    font-size: 13px;
+    color: #999;
 }
