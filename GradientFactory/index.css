@@ -77,17 +77,24 @@ select {
 }
 
 #main section {
-    margin-bottom: 56px;
+    margin: 56px 0;
 }
 
 .section-label {
-    font-size: 10px;
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: #999;
     border-bottom: 1px solid var(--rule);
     padding-bottom: 8px;
     margin-bottom: 20px;
+}
+
+.interpolation-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999;
 }
 
 .gradient-band {
@@ -116,18 +123,31 @@ select {
     box-sizing: border-box;
 }
 
-.gallery-grid {
+.playground-swatch-row {
     display: flex;
-    flex-direction: column;
-    gap: 32px;
+    gap: 8px;
+    margin-top: 12px;
 }
 
-.gallery-name {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #999;
-    margin-bottom: 8px;
+.playground-swatch {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid var(--rule);
+    cursor: pointer;
+    background: none;
+}
+
+.playground-swatch::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.playground-swatch::-webkit-color-swatch {
+    border: none;
+}
+
+.playground-swatch::-moz-color-swatch {
+    border: none;
 }
 
 /* Randomizer */
@@ -230,6 +250,7 @@ select {
     background: var(--ink);
     color: var(--paper);
     cursor: pointer;
+    float: right;
 }
 
 .div-button:hover {
@@ -243,6 +264,7 @@ select {
     margin-top: 16px;
 }
 
+/* Extractor */
 .file-upload-input {
     position: absolute;
     width: 1px;
@@ -269,4 +291,19 @@ select {
 .file-upload-name {
     font-size: 13px;
     color: #999;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.gallery-name {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999;
+    margin-bottom: 8px;
 }
