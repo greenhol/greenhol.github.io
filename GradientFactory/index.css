@@ -80,6 +80,22 @@ select {
     margin: 56px 0;
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.section-header-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #999;
+}
+
 .section-label {
     font-size: 11px;
     text-transform: uppercase;
